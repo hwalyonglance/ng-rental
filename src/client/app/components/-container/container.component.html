@@ -1,0 +1,18 @@
+<div class="pras--container">
+	<md-sidenav-container fullscreen (backdropClick)='C_pras_nav.sidenavOpened = false'>
+		<md-sidenav #C_mat_sidenav [opened]="!S_Sidenav.isScreenSmall()" [mode]="'over'" (close)='C_pras_nav.sidenavOpened = false' (open)='C_pras_nav.sidenavOpened = true'>
+			<pras--sidenav></pras--sidenav>
+		</md-sidenav>
+		<div class='orange' fxLayout='column'>
+			<pras--nav #C_pras_nav ($pras_sidenav$)='C_mat_sidenav.toggle()'>
+			</pras--nav>
+			<div class='orange' fxFlex fxLayout='row' [class.padding-left-255px]='C_mat_sidenav.opened && !S_Sidenav.isScreenSmall()'>
+				<div [fxFlex]='C_mat_sidenav.opened ? (S_Sidenav.isScreenSmall() ? 0 : 18.7) : (S_Sidenav.isScreenSmall() ? 0 : 18.7)'></div>
+				<div class='orange' fxFlex style="height: 100%;">
+					<ng-content></ng-content>
+				</div>
+				<div [fxFlex]='C_mat_sidenav.opened ? (S_Sidenav.isScreenSmall() ? 0 : 18.7) : (S_Sidenav.isScreenSmall() ? 0 : 18.7)'></div>
+			</div>
+		</div>
+	</md-sidenav-container>
+</div>

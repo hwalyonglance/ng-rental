@@ -1,0 +1,102 @@
+<div class='pras--murid-f1'>
+	<form [formGroup]='MuridF1FGroup' fxLayout='row' fxLayoutAlign='space-around' fxLayoutGap='20px' fxLayoutWrap>
+		<div fxFlex>
+			<md-form-field>
+				<input formControlName='nama' mdInput [maxlength]='SCHEMAS.nama.maxLength' [placeholder]="SCHEMAS.nama.label" [required]='SCHEMAS.nama.required'>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF1FGroup.get('nama').value.length }} / {{ SCHEMAS.nama.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input formControlName='tempatL' mdInput [maxlength]='SCHEMAS.tempatL.maxLength' placeholder="Tempat Lahir" [required]='SCHEMAS.tempatL.required'>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF1FGroup.get('tempatL').value.length }} / {{ SCHEMAS.tempatL.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input (blur)='tempatL.close()' (click)='tempatL.open()' formControlName='tanggalL' (keydown)='preventTyping($event)' [maxlength]='SCHEMAS.tempatL.maxLength' [mdDatepicker]='tempatL' mdInput [placeholder]='SCHEMAS.tempatL.label' [required]='SCHEMAS.tempatL.required'>
+				<md-datepicker-toggle mdSuffix [for]="tempatL"></md-datepicker-toggle>
+				<md-datepicker #tempatL></md-datepicker>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w180'>
+				<input formControlName='nik' [maxlength]='SCHEMAS.nik.maxLength' mdInput [placeholder]="SCHEMAS.nik.label" [required]='SCHEMAS.nik.required' [step]='SCHEMAS.nik.step' [type]='SCHEMAS.nik.type'>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF1FGroup.get('nik').value.length }} / {{ SCHEMAS.nik.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w180'>
+				<input formControlName='dari' [maxlength]='SCHEMAS.dari.maxLength' mdInput [placeholder]="SCHEMAS.dari.label" [required]='SCHEMAS.dari.required'>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF1FGroup.get('dari').value.length }} / {{ SCHEMAS.dari.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w180'>
+				<input formControlName='ijazah' [maxlength]='SCHEMAS.ijazah.maxLength' mdInput [placeholder]='SCHEMAS.ijazah.label' [required]='SCHEMAS.ijazah.required'>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF1FGroup.get('ijazah').value.length }} / {{ SCHEMAS.ijazah.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w180'>
+				<input formControlName='nisn' [maxlength]='SCHEMAS.nisn.maxLength' mdInput [placeholder]='SCHEMAS.nisn.label' [required]='SCHEMAS.nisn.required'>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF1FGroup.get('nisn').value.length }} / {{ SCHEMAS.nisn.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w180'>
+				<input formControlName='skhun' mdInput [placeholder]='SCHEMAS.skhun.label' [required]='SCHEMAS.skhun.required'>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF1FGroup.get('skhun').value.length }} / {{ SCHEMAS.skhun.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-select class='w120' formControlName='lulus' [placeholder]='SCHEMAS.lulus.label' [required]='SCHEMAS.lulus.required'>
+				<md-option value='2010/2011'>2010/2011</md-option>
+				<md-option value='2011/2012'>2011/2012</md-option>
+				<md-option value='2012/2013'>2012/2013</md-option>
+				<md-option value='2013/2014'>2013/2014</md-option>
+				<md-option value='2014/2015' selected>2014/2015</md-option>
+			</md-select>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w100'>
+				<input formControlName='agama' mdInput [placeholder]='SCHEMAS.agama.label' [required]='SCHEMAS.agama.required'>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF1FGroup.get('agama').value.length }} / {{ SCHEMAS.agama.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-select class='w200' formControlName='golDar' [placeholder]='SCHEMAS.golDar.label' [required]='SCHEMAS.golDar.required'>
+				<md-option *ngFor='let darah of SCHEMAS.golDar.enum; let i = index' [value]='i'>{{ darah }}</md-option>
+			</md-select>
+		</div>
+		<div fxFlex>
+			<md-select class='w200' formControlName='jk' [placeholder]='SCHEMAS.jk.label' [required]='SCHEMAS.jk.required'>
+				<md-option *ngFor='let kel of SCHEMAS.jk.enum; let i = index' [value]='i'>{{ kel }}</md-option>
+			</md-select>
+		</div>
+	</form>
+</div>

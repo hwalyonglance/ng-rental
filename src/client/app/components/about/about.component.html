@@ -1,0 +1,54 @@
+<div class="pras--about">
+	<pras--container>
+		<div style="padding: 20px;">
+			<p>
+				about Works!
+			</p>
+			<a routerLink='/'>Home</a>
+			<md-vertical-stepper>
+				<md-step>
+					<ng-template mdStepLabel>Data Pribadi Calon Murid</ng-template>
+					<pras--murid-f1 #C_PrasMuridF1></pras--murid-f1>
+					<div>
+						<br>
+						<br>
+						<button color='primary' md-raised-button mdStepperNext type='button'>Next</button>
+					</div>
+				</md-step>
+				<md-step>
+					<ng-template mdStepLabel>Keterangan Calon Murid</ng-template>
+					<pras--murid-f2></pras--murid-f2>
+					<div>
+						<button type='button' md-button mdStepperPrevious>Previous</button>
+						<button type='button' md-button mdStepperNext>Next</button>
+					</div>
+				</md-step>
+				<md-step>
+					<ng-template mdStepLabel>Data Ayah</ng-template>
+					<pras--murid-f3></pras--murid-f3>
+					<div>
+						<button type='button' md-button mdStepperPrevious>Previous</button>
+						<button type='button' md-button mdStepperNext>Next</button>
+					</div>
+				</md-step>
+				<md-step>
+					<ng-template mdStepLabel>Data Ibu</ng-template>
+					<pras--murid-f3></pras--murid-f3>
+					<div>
+						<button type='button' md-button mdStepperPrevious>Previous</button>
+						<button type='button' md-button mdStepperNext>Next</button>
+					</div>
+				</md-step>
+				<md-step>
+					<ng-template mdStepLabel>Data Wali</ng-template>
+					<pras--murid-f3></pras--murid-f3>
+					<div>
+						<button type='button' md-button mdStepperPrevious>Previous</button>
+						<button type='button' md-button mdStepperNext>Next</button>
+					</div>
+				</md-step>
+			</md-vertical-stepper>
+		</div>
+		<pras--footer></pras--footer>
+	</pras--container>
+</div>

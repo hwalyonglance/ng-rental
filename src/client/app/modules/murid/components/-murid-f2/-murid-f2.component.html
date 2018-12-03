@@ -1,0 +1,183 @@
+<div class='pras--murid-f2'>
+	<form [formGroup]='MuridF2FGroup' fxLayout='row' fxLayoutAlign='space-around' fxLayoutGap='20px' fxLayoutWrap>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input formControlName='panggilan' [maxlength]='SCHEMAS.panggilan.maxLength' mdInput [placeholder]="SCHEMAS.panggilan.label">
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('panggilan').value.length }} / {{ SCHEMAS.panggilan.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input formControlName='jSaudara' [maxlength]='SCHEMAS.jSaudara.maxLength' mdInput type='number' [placeholder]="SCHEMAS.jSaudara.label">
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('jSaudara').value.length }} / {{ SCHEMAS.jSaudara.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input formControlName='tinggi' [maxlength]='SCHEMAS.tinggi.maxLength' mdInput type='number' [placeholder]="SCHEMAS.tinggi.label">
+				<md-hint mdSuffix>CM</md-hint>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('tinggi').value.length }} / {{ SCHEMAS.tinggi.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input formControlName='berat' [maxlength]='SCHEMAS.berat.maxLength' mdInput type='number' [placeholder]="SCHEMAS.berat.label">
+				<md-hint mdSuffix>Kg</md-hint>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('berat').value.length }} / {{ SCHEMAS.berat.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w180'>
+				<input formControlName='hobby' [maxlength]='SCHEMAS.hobby.maxLength' mdInput [placeholder]="SCHEMAS.hobby.label">
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('hobby').value.length }} / {{ SCHEMAS.hobby.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input formControlName='noSeluler' [maxlength]='SCHEMAS.noSeluler.maxLength' mdInput [placeholder]="SCHEMAS.noSeluler.label">
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('noSeluler').value.length }} / {{ SCHEMAS.noSeluler.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w180'>
+				<input formControlName='email' [maxlength]='SCHEMAS.email.maxLength' mdInput [placeholder]="SCHEMAS.email.label">
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('email').value.length }} / {{ SCHEMAS.email.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-select class='w180' formControlName='status' placeholder="Status">
+				<md-option *ngFor='let status of SCHEMAS.status.enum; let i = index' [value]='i'>{{ status }}</md-option>
+			</md-select>
+		</div>
+		<div fxFlex>
+			<md-select formControlName='eskul' [maxlength]='SCHEMAS.eskul.maxLength' multiple class='w180' [placeholder]="SCHEMAS.eskul.label">
+				<md-option value='Karate'>Karate</md-option>
+				<md-option value='Poli'>Poli</md-option>
+				<md-option value='Pramuka'>Pramuka</md-option>
+				<md-option value='Putsal'>Putsal</md-option>
+				<md-option value='Teater'>Teater</md-option>
+			</md-select>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w100'>
+				<input formControlName='desa' [maxlength]='SCHEMAS.desa.maxLength' mdInput [placeholder]="SCHEMAS.desa.label">
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('desa').value.length }} / {{ SCHEMAS.desa.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w100'>
+				<input formControlName='kota' [maxlength]='SCHEMAS.kota.maxLength' mdInput [placeholder]="SCHEMAS.kota.label">
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('kota').value.length }} / {{ SCHEMAS.kota.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w100'>
+				<input formControlName='kecamatan' [maxlength]='SCHEMAS.kecamatan.maxLength' mdInput [placeholder]="SCHEMAS.kecamatan.label">
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('kecamatan').value.length }} / {{ SCHEMAS.kecamatan.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w40'>
+				<input formControlName='blok' [maxlength]='SCHEMAS.blok.maxLength' mdInput [placeholder]="SCHEMAS.blok.label">
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('blok').value.length }} / {{ SCHEMAS.blok.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w80'>
+				<input formControlName='noRumah' [maxlength]='SCHEMAS.noRumah.maxLength' mdInput [placeholder]="SCHEMAS.noRumah.label">
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('noRumah').value.length }} / {{ SCHEMAS.noRumah.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w40'>
+				<input formControlName='rt' [maxlength]='SCHEMAS.rt.maxLength' mdInput [placeholder]="SCHEMAS.rt.label">
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('rt').value.length }} / {{ SCHEMAS.rt.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w40'>
+				<input formControlName='rw' [maxlength]='SCHEMAS.rw.maxLength' mdInput [placeholder]="SCHEMAS.rw.label">
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('rw').value.length }} / {{ SCHEMAS.rw.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input formControlName='jarak' [maxlength]='SCHEMAS.jarak.maxLength' mdInput type='number' [placeholder]="SCHEMAS.jarak.label">
+				<md-hint mdSuffix>(KM)</md-hint>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('jarak').value.length }} / {{ SCHEMAS.jarak.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field>
+				<textarea formControlName='alamat' [maxlength]='SCHEMAS.alamat.maxLength' mdInput mdTextareaAutosize mdAutosizeMaxRows='4' [placeholder]="SCHEMAS.alamat.label"></textarea>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('alamat').value.length }} / {{ SCHEMAS.alamat.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field>
+				<textarea formControlName='kDiLuar' [maxlength]='SCHEMAS.kDiLuar.maxLength' mdInput mdTextareaAutosize mdAutosizeMaxRows='4' [placeholder]="SCHEMAS.kDiLuar.label"></textarea>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('kDiLuar').value.length }} / {{ SCHEMAS.kDiLuar.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field>
+				<textarea formControlName='prestasi' [maxlength]='SCHEMAS.prestasi.maxLength' mdInput mdTextareaAutosize mdAutosizeMaxRows='4' [placeholder]="SCHEMAS.prestasi.label"></textarea>
+				<md-hint align='end'>
+					<md-icon>mode_edit</md-icon>
+					{{ MuridF2FGroup.get('prestasi').value.length }} / {{ SCHEMAS.prestasi.maxLength }}
+				</md-hint>
+			</md-form-field>
+		</div>
+	</form>
+</div>

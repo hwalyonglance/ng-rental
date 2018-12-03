@@ -1,0 +1,71 @@
+<div class='pras--murid-f2'>
+	<form fxLayout='row' fxLayoutAlign='space-around' fxLayoutGap='20px' fxLayoutWrap>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input mdInput placeholder="Nama Lengkap">
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input mdInput placeholder="Pekerjaan">
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input mdInput placeholder="Tempat Lahir">
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input mdInput [mdDatepicker]="minDatePicker" (click)='minDatePicker.open()' (blur)='minDatePicker.close()' placeholder="Tanggal Lahir">
+				<md-datepicker-toggle mdSuffix [for]="minDatePicker"></md-datepicker-toggle>
+				<md-datepicker #minDatePicker></md-datepicker>
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w160'>
+				<input mdInput placeholder="Agama">
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w120'>
+				<input mdInput placeholder="No. Seluler">
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w180'>
+				<input mdInput placeholder="Kewarganegaraan">
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w180'>
+				<input mdInput placeholder="Pendidikan Terakhir">
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-select multiple class='w180' placeholder="Penghasilan Perbulan">
+				<md-option value='&lt; Rp. 500.000'>&lt; Rp. 500.000</md-option>
+				<md-option value='&lt; Rp. 1.000.000'>&lt; Rp. 1.000.000</md-option>
+				<md-option value='&lt; Rp. 2.000.000'>&lt; Rp. 2.000.000</md-option>
+				<md-option value='&lt; Rp. 5.000.000'>&lt; Rp. 5.000.000</md-option>
+				<md-option value='&lt; Rp. 10.000.000'>&lt; Rp. 10.000.000</md-option>
+				<md-option value='&gt; Rp. 10.000.000'>&gt; Rp. 10.000.000</md-option>
+			</md-select>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w180'>
+				<input mdInput placeholder="KPS">
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field class='w180'>
+				<input mdInput placeholder="Tempat Bekerja">
+			</md-form-field>
+		</div>
+		<div fxFlex>
+			<md-form-field>
+				<textarea mdInput mdTextareaAutosize mdAutosizeMaxRows='4' placeholder="Alamat"></textarea>
+			</md-form-field>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,61 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "pak-pras"
+  },
+  "apps": [
+    {
+      "root": "src/client",
+      "outDir": "dist/public",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.browser.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "prefix": "pras",
+      "styles": [
+        "styles.scss"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json"
+    }
+  ],
+  "defaults": {
+    "styleExt": "scss",
+    "component": {
+      "spec": false,
+      "inlineStyle": true
+    },
+    "directive": {
+      "spec": false
+    },
+    "class": {
+      "spec": false
+    },
+    "guard": {
+      "spec": false
+    },
+    "module": {
+      "spec": false
+    },
+    "pipe": {
+      "spec": false
+    },
+    "service": {
+      "spec": false
+    }
+  }
+}
